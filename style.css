@@ -97,11 +97,12 @@ header {
 #logo {
 	height: 100%;
 	line-height: 100%;
+	align-self: center;
 }
 
 #logo img {
 	grid-area: logo;
-	height: 35px;
+	height: 100%;
 	width: auto;
 	vertical-align: middle;
 	align-self: center;
