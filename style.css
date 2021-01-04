@@ -22,74 +22,94 @@ a:hover {
 /* TEXT */
 
 h1 {
-	font-family: Work Sans, Arial;
+	font-family: Heebo, Arial;
 	font-weight: 900;
 	font-size: 4rem;
 	text-transform: uppercase;
-	line-height: 3.5rem;
-	letter-spacing: 0.5rem;
-	color: #000;
+	line-height: 3.2rem;
+	color: #80c5a5;
 	margin: 0px;
 }
 
 h2 {
-	font-family: Work Sans, Arial;
-	font-weight: 900;
+	font-family: Heebo, Arial;
+	font-weight: 600;
 	text-transform: uppercase;
-	letter-spacing: 0.1rem;
 	font-size: 2rem;
 	color: #000;
 	margin: 0px;
 }
 
 h3 {
-	font-family: Work Sans, Arial;
-	font-weight: 600;
+	font-family: Poppins, Arial;
+	font-weight: 400;
 	text-transform: uppercase;
 	font-size: 1.2rem;
 	margin: 0px;
 }
 
 h4 {
-	font-family: Work Sans, Arial;
+	font-family: Poppins, Arial;
 	font-weight: 400;
 	font-size: 0.9rem;
-	color: #4d4c4b;
 	margin: 0px;
 }
 
 h5 {
-	font-family: Work Sans, Arial;
+	font-family: Poppins, Arial;
 	font-weight: 400;
 	font-size: 0.8rem;
-	color: #4d4c4b;
+	color: #ededed;
 	margin: 0px;
+}
+
+/* HEADER */
+
+.button {
+	background-color: transparent;
+	color: #ededed;
+	border: 1px solid #ef7e5f;
+	width: 10vw;
+	margin: 0px 10px;
+	border-radius: 150px;
+	cursor: pointer;
+}
+
+.button:hover {
+	background-color: #ef7e5f;
+	color: #482d69;
+	border: 1px solid #ef7e5f;
+	width: 10vw;
+	margin: 0px 10px;
+	border-radius: 150px;
 }
 
 /* GRID */
 
 body {
-	background-color: green;
-	margin: 0;
+	background-color: #482d69;
+	margin: 1vh;
     padding: 0;
-	height: 100vh;
+	height: 98vh;
 	display: grid;
 	grid-template-columns: 2fr 4fr 5fr auto 5fr 4fr 2fr;
 	grid-template-rows: 8% 81% 9%;
 	grid-template-areas: 
-    ". header header header header header ."
+    "header header header header header header header"
     ". main main main main main ."
     ". footer footer footer footer footer .";
     column-gap: 1%;
   	row-gap: 1%;
 }
 
+/* HEADER */
+
 header {
+	height:;
 	display: flex;
 	justify-content: space-between;
 	padding: 5px 20px;
 	grid-area: header;
-	background-color: blue;
 	align-items: center;
 	align-content: center;
 }
@@ -112,12 +132,32 @@ nav {
 	align-items: center;
 }
 
+/* MAIN */
+
 main {
 	grid-area: main;
-	background-color: red;
+	align-self: center;
+	display: inline-block;
 }
+
+#headline {
+	width: 40vw;
+}
+
+#underline {
+	margin: 10px 0px;
+	height: 2px;
+	background-color: #ef7e5f;
+}
+
+#animation {
+	height: 5px;
+	background-color: red;
+	width: 10vw;
+}
+
+/* FOOTER */
 
 footer {
 	grid-area: footer;
-	background-color: purple;
 }
