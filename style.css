@@ -19,6 +19,16 @@ a:hover {
   box-sizing: border-box;
 }
 
+/* VARIABLES */
+
+:root {
+  --primary-color: #482d69;
+  --secondary-color: #80c5a5;
+  --third-color: #ededed;
+  --fourth-color: #ef7e5f;
+}
+
+
 /* TEXT */
 
 h1 {
@@ -27,7 +37,7 @@ h1 {
 	font-size: 4rem;
 	text-transform: uppercase;
 	line-height: 3.2rem;
-	color: #80c5a5;
+	color: var(--secondary-color);
 	margin: 0px;
 }
 
@@ -36,7 +46,7 @@ h2 {
 	font-weight: 600;
 	text-transform: uppercase;
 	font-size: 2rem;
-	color: #000;
+	color: var(--secondary-color);
 	margin: 0px;
 }
 
@@ -59,7 +69,7 @@ h5 {
 	font-family: Poppins, Arial;
 	font-weight: 400;
 	font-size: 0.8rem;
-	color: #ededed;
+	color: var(--third-color);
 	margin: 0px;
 }
 
@@ -67,8 +77,8 @@ h5 {
 
 .button {
 	background-color: transparent;
-	color: #ededed;
-	border: 1px solid #ef7e5f;
+	color: var(--third-color);
+	border: 1px solid var(--fourth-color);
 	width: 10vw;
 	margin: 0px 10px;
 	border-radius: 150px;
@@ -76,9 +86,9 @@ h5 {
 }
 
 .button:hover {
-	background-color: #ef7e5f;
-	color: #482d69;
-	border: 1px solid #ef7e5f;
+	background-color: var(--fourth-color);
+	color: var(--third-color);
+	border: 1px solid var(--fourth-color);
 	width: 10vw;
 	margin: 0px 10px;
 	border-radius: 150px;
@@ -87,7 +97,7 @@ h5 {
 /* GRID */
 
 body {
-	background-color: #482d69;
+	background-color: var(--primary-color);
 	margin: 1vh;
     padding: 0;
 	height: 98vh;
@@ -119,6 +129,7 @@ header {
 	height: 100%;
 	line-height: 100%;
 	align-self: center;
+	cursor: pointer;
 }
 
 #logo img {
@@ -126,7 +137,7 @@ header {
 	height: 100%;
 	width: auto;
 	vertical-align: middle;
-	align-self: center;
+	align-self: center;color: blacl;
 }
 
 nav {
@@ -141,29 +152,36 @@ main {
 	grid-template-columns: 1fr 1fr;
 	overflow: hidden;
 	grid-template-areas: 
-    "headline ."
+    "content ."
 }
 
-#headline {
-	grid-area: headline;
+.content {
+	grid-area: content;
 	align-self: center;
 }
+
+#home {
+	display: block;
+}
+
+
+#about {
+	display: none;
+}
+
+#projects {
+	display: none;
+}
+
+#contact {
+	display: none;
+}
+
 
 #underline {
 	margin: 10px 0px;
 	height: 2px;
-	background-color: #ef7e5f;
-}
-
-#animation {
-	height: 5px;
-	background-color: red;
-	width: 10vw;
-}
-
-#about {
-	grid-area: headline;
-	align-self: center;
+	background-color: var(--fourth-color);
 }
 
 /* FOOTER */
