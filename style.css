@@ -93,13 +93,14 @@ body {
 	height: 98vh;
 	display: grid;
 	grid-template-columns: 2fr 4fr 5fr auto 5fr 4fr 2fr;
-	grid-template-rows: 8% 81% 9%;
+	grid-template-rows: 8% 85% 5%;
 	grid-template-areas: 
     "header header header header header header header"
     ". main main main main main ."
-    ". footer footer footer footer footer .";
+    ". . footer footer footer . .";
     column-gap: 1%;
   	row-gap: 1%;
+  	overflow: hidden;
 }
 
 /* HEADER */
@@ -136,12 +137,16 @@ nav {
 
 main {
 	grid-area: main;
-	align-self: center;
-	display: inline-block;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	overflow: hidden;
+	grid-template-areas: 
+    "headline ."
 }
 
 #headline {
-	width: 40vw;
+	grid-area: headline;
+	align-self: center;
 }
 
 #underline {
@@ -156,8 +161,14 @@ main {
 	width: 10vw;
 }
 
+#about {
+	grid-area: headline;
+	align-self: center;
+}
+
 /* FOOTER */
 
 footer {
 	grid-area: footer;
+	text-align: center;
 }
