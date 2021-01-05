@@ -53,8 +53,7 @@ h2 {
 h3 {
 	font-family: Poppins, Arial;
 	font-weight: 400;
-	text-transform: uppercase;
-	font-size: 1.2rem;
+	font-size: 1.3rem;
 	margin: 0px;
 }
 
@@ -73,7 +72,14 @@ h5 {
 	margin: 0px;
 }
 
-/* HEADER */
+p {
+	font-family: Poppins, Arial;
+	font-weight: 300;
+	line-height: 1.4em;
+	margin: 0px;
+}
+
+/* BUTTONS */
 
 .button {
 	background-color: transparent;
@@ -91,6 +97,14 @@ h5 {
 	border: 1px solid var(--third-color);
 }
 
+.b3 {
+	border: 1px solid var(--third-color);
+	border-radius: 0px;
+	width: 90%;
+	padding: 10px;
+	margin: 20px;
+}
+
 .button:hover {
 	background-color: var(--fourth-color);
 	color: var(--third-color);
@@ -98,6 +112,13 @@ h5 {
 	width: 10vw;
 	margin: 0px 10px;
 	border-radius: 150px;
+}
+
+.b3:hover {
+	border-radius: 0px;
+	width: 90%;
+	padding: 10px;
+	margin: 20px;
 }
 
 /* GRID */
@@ -158,11 +179,11 @@ main {
 	grid-template-columns: 1fr 1fr;
 	overflow: hidden;
 	grid-template-areas: 
-    "content ."
+    "content1 content2"
 }
 
-.content {
-	grid-area: content;
+.content1 {
+	grid-area: content1;
 	align-self: center;
 }
 
@@ -184,9 +205,72 @@ main {
 	display: none;
 }
 
+#introduction {
+	margin-bottom: 15px;
+}
+
 /* PROJECTS */
 
-#projects {
+.projects {
+	display: none;
+}
+
+#display-projects {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-areas: 
+    "left right"
+    column-gap: 1%;
+  	row-gap: 1%;
+}
+
+#project1 {
+	grid-area: left;
+}
+
+#project2 {
+	grid-area: right;
+}
+
+.content2 {
+	grid-area: content2;
+	margin: 20px;
+	width: 100%;
+	text-align: center;
+}
+
+#project-image {
+	width: 90%;
+	max-height: 288px;
+	object-fit: cover;
+	border-radius: 20px;
+}
+
+#project-name {
+	padding: 10px;
+}
+
+#project-blurb {
+	padding: 0px 20px;
+}
+
+#project-demo {
+	padding: 10px;
+}
+
+#projectOne {
+	display: block;
+}
+
+#projectTwo {
+	display: none;
+}
+
+#projectThree {
+	display: none;
+}
+
+#projectFour {
 	display: none;
 }
 
