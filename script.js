@@ -32,12 +32,12 @@ let projectsButton = document.getElementById("projects-button");
 projectsButton.onclick = projectsAction;
 
 function projectsAction(e) {
-	document.documentElement.style.setProperty('--primary-color', '#ededed');
-	document.documentElement.style.setProperty('--secondary-color', '#482d69');
-	document.documentElement.style.setProperty('--third-color', '#482d69');
-	document.documentElement.style.setProperty('--fourth-color', '#80c5a5');
+	document.documentElement.style.setProperty('--primary-color', '#482d69');
+	document.documentElement.style.setProperty('--secondary-color', '#ededed');
+	document.documentElement.style.setProperty('--third-color', '#80c5a5');
+	document.documentElement.style.setProperty('--fourth-color', '#fff');
 
-	logo.setAttribute("src", "images/logo2.svg");
+	logo.setAttribute("src", "images/logo.svg");
 
 	let homePage = document.getElementById("home");
 	homePage.setAttribute("style", "display: none;");
@@ -128,6 +128,9 @@ function projectOneAction(e) {
 
 	let projectFourPage = document.getElementById("projectFour");
 	projectFourPage.setAttribute("style", "display: none;");
+
+	let projectFivePage = document.getElementById("projectFive");
+	projectFivePage.setAttribute("style", "display: none;");
 }
 
 
@@ -150,6 +153,9 @@ function projectTwoAction(e) {
 	let projectFourPage = document.getElementById("projectFour");
 	projectFourPage.setAttribute("style", "display: none;");
 
+	let projectFivePage = document.getElementById("projectFive");
+	projectFivePage.setAttribute("style", "display: none;");
+
 }
 
 /* Project Three button Functionality */
@@ -170,9 +176,12 @@ function projectThreeAction(e) {
 
 	let projectFourPage = document.getElementById("projectFour");
 	projectFourPage.setAttribute("style", "display: none;");
+
+	let projectFivePage = document.getElementById("projectFive");
+	projectFivePage.setAttribute("style", "display: none;");
 }
 
-/* Project Two button Functionality */
+/* Project Four button Functionality */
 
 let projectFour = document.getElementById("project4-button");
 projectFour.onclick = projectFourAction;
@@ -191,5 +200,31 @@ function projectFourAction(e) {
 	let projectFourPage = document.getElementById("projectFour");
 	projectFourPage.setAttribute("style", "display: block;");
 
-	consolelog("hello");
+	let projectFivePage = document.getElementById("projectFive");
+	projectFivePage.setAttribute("style", "display: none;");
+
 }
+
+/* Project Five button Functionality */
+
+let projectFive = document.getElementById("project5-button");
+projectFive.onclick = projectFiveAction;
+
+function projectFiveAction(e) {
+	
+	let projectOnePage = document.getElementById("projectOne");
+	projectOnePage.setAttribute("style", "display: none;");
+
+	let projectTwoPage = document.getElementById("projectTwo");
+	projectTwoPage.setAttribute("style", "display: none;");
+
+	let projectThreePage = document.getElementById("projectThree");
+	projectThreePage.setAttribute("style", "display: none;");
+
+	let projectFourPage = document.getElementById("projectFour");
+	projectFourPage.setAttribute("style", "display: none;");
+
+	let projectFivePage = document.getElementById("projectFive");
+	projectFivePage.setAttribute("style", "display: block");
+}
+

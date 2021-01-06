@@ -51,9 +51,11 @@ h2 {
 }
 
 h3 {
-	font-family: Poppins, Arial;
-	font-weight: 400;
+	font-family: Heebo, Arial;
+	font-weight: 600;
 	font-size: 1.3rem;
+	color: var(--secondary-color);
+	text-transform: uppercase;
 	margin: 0px;
 }
 
@@ -85,7 +87,7 @@ p {
 	background-color: transparent;
 	color: var(--third-color);
 	border: 1px solid var(--fourth-color);
-	width: 10vw;
+	width: 15vw;
 	margin: 0px 10px;
 	border-radius: 150px;
 	cursor: pointer;
@@ -101,15 +103,21 @@ p {
 	border: 1px solid var(--third-color);
 	border-radius: 0px;
 	width: 90%;
-	padding: 10px;
-	margin: 20px;
+	padding: 5px;
+	margin: 10px;
+}
+
+.b4 {
+	background-color: var(--third-color);
+	color: var(--primary-color);
+	border: 1px solid var(--third-color);
 }
 
 .button:hover {
 	background-color: var(--fourth-color);
 	color: var(--third-color);
 	border: 1px solid var(--fourth-color);
-	width: 10vw;
+	width: 15vw;
 	margin: 0px 10px;
 	border-radius: 150px;
 }
@@ -117,8 +125,8 @@ p {
 .b3:hover {
 	border-radius: 0px;
 	width: 90%;
-	padding: 10px;
-	margin: 20px;
+	padding: 5px;
+	margin: 10px;
 }
 
 /* GRID */
@@ -164,7 +172,7 @@ header {
 	height: 100%;
 	width: auto;
 	vertical-align: middle;
-	align-self: center;color: blacl;
+	align-self: center;
 }
 
 nav {
@@ -176,10 +184,11 @@ nav {
 main {
 	grid-area: main;
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	margin: 5px;
+	grid-template-columns: 3fr 4fr;
 	overflow: hidden;
 	grid-template-areas: 
-    "content1 content2"
+    "content1 content2";
 }
 
 .content1 {
@@ -217,11 +226,10 @@ main {
 
 #display-projects {
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: 3fr 3fr 1fr;
 	grid-template-areas: 
-    "left right"
+    "left right .";
     column-gap: 1%;
-  	row-gap: 1%;
 }
 
 #project1 {
@@ -234,9 +242,14 @@ main {
 
 .content2 {
 	grid-area: content2;
-	margin: 20px;
+	margin: auto 20px;
 	width: 100%;
 	text-align: center;
+	vertical-align: middle;
+}
+
+.content2 p {
+	color: var(--fourth-color);
 }
 
 #project-image {
@@ -244,14 +257,14 @@ main {
 	max-height: 288px;
 	object-fit: cover;
 	border-radius: 20px;
+	padding: 10px 10px;
 }
 
 #project-name {
-	padding: 10px;
 }
 
 #project-blurb {
-	padding: 0px 20px;
+	padding: 10px 20px;
 }
 
 #project-demo {
@@ -271,6 +284,10 @@ main {
 }
 
 #projectFour {
+	display: none;
+}
+
+#projectFive {
 	display: none;
 }
 
@@ -325,4 +342,201 @@ input, select, textarea{
 footer {
 	grid-area: footer;
 	text-align: center;
+}
+
+
+/* MEDIA QUERIES */
+
+/* Tablet */
+
+@media (min-width: 600px) and (max-width: 800px) {
+
+	html {
+	font-size: 80%;
+}
+
+	body {
+	grid-template-columns: 1fr 8fr 10fr auto 10fr 8fr 1fr;
+}
+
+  	main {
+  	grid-template-columns: 1fr;
+	grid-template-rows: 39% 60%;
+	grid-template-areas: 
+    "content1"
+    "content2";
+    row-gap: 1%;
+}
+
+	#display-projects {
+	grid-template-columns: 1fr 1fr;
+	grid-template-areas: 
+    "left right";
+}
+
+
+	.content2 {
+	margin: auto;
+}
+
+	.content2 p {
+	margin: auto;
+}
+
+	.button {
+	width: 20vw;
+}
+
+	.button:hover {
+	width: 20vw;
+}
+
+	.content1 .button {
+	width: 90%;
+}
+
+	#project-image {
+	width: 50%;
+}
+}
+
+/* Mobile Phones*/
+
+@media (max-width: 600px) {
+	html {
+	font-size: 80%;
+}
+
+	body {
+	grid-template-columns: 1fr 8fr 10fr auto 10fr 8fr 1fr;
+}
+
+  	main {
+  	grid-template-columns: 1fr;
+	grid-template-rows: 39% 60%;
+	grid-template-areas: 
+    "content1"
+    "content2";
+    row-gap: 1%;
+}
+
+	#display-projects {
+	grid-template-columns: 1fr 1fr;
+	grid-template-areas: 
+    "left right";
+}
+
+
+	.content2 {
+	margin: auto;
+}
+
+	.content2 p {
+	margin: auto;
+}
+
+	.button {
+	width: 22vw;
+	height: 10vw;
+	margin: 2px;
+	padding: 1px;
+}
+
+	.button:hover {
+	width: 22vw;
+	height: 10vw;
+	margin: 2px;
+	padding: 1px;
+}
+
+	.content1 .button {
+	width: 90%;
+}
+
+	#project-image {
+	width: 50%;
+}
+
+	#logo {
+	height: 50%;
+}
+}
+
+/* Mobile Phones*/
+
+@media (max-width: 400px) {
+	html {
+	font-size: 80%;
+}
+
+	body {
+	grid-template-columns: 1fr 8fr 10fr auto 10fr 8fr 1fr;
+}
+
+  	main {
+  	grid-template-columns: 1fr;
+	grid-template-rows: 44% 55%;
+	grid-template-areas: 
+    "content1"
+    "content2";
+    row-gap: 1%;
+}
+
+	#display-projects {
+	grid-template-columns: 1fr 1fr;
+	grid-template-areas: 
+    "left right";
+}
+
+
+	.content2 {
+	margin: auto;
+}
+
+	.content2 p {
+	margin: auto;
+}
+
+	.button {
+	width: 22vw;
+	height: 6vw;
+	margin: 2px;
+	padding: 1px;
+}
+
+	.button:hover {
+	width: 22vw;
+	height: 8vw;
+	margin: 2px;
+	padding: 1px;
+}
+
+	.content1 .button {
+	width: 90%;
+}
+
+	#project-image {
+	width: 50%;
+}
+
+	#logo {
+	height: 50%;
+}
+
+	h1 {
+	font-size: 3.5rem;
+	}
+
+	h4 {
+	font-size: 0.7rem;
+	}
+
+	p {
+	font-size: 0.7rem;
+	}
+
+	footer h5 {
+	font-size: 0.5rem;
+
+	}
 }
