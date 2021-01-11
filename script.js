@@ -134,6 +134,10 @@ function projectOneAction(e) {
 
 	let projectSixPage = document.getElementById("projectSix");
 	projectSixPage.setAttribute("style", "display: none");
+
+	let projectSevenPage = document.getElementById("projectSeven");
+	projectSevenPage.setAttribute("style", "display: none");
+	
 }
 
 
@@ -162,6 +166,9 @@ function projectTwoAction(e) {
 	let projectSixPage = document.getElementById("projectSix");
 	projectSixPage.setAttribute("style", "display: none");
 
+	let projectSevenPage = document.getElementById("projectSeven");
+	projectSevenPage.setAttribute("style", "display: none");
+
 }
 
 /* Project Three button Functionality */
@@ -188,6 +195,9 @@ function projectThreeAction(e) {
 
 	let projectSixPage = document.getElementById("projectSix");
 	projectSixPage.setAttribute("style", "display: none");
+
+	let projectSevenPage = document.getElementById("projectSeven");
+	projectSevenPage.setAttribute("style", "display: none");
 }
 
 /* Project Four button Functionality */
@@ -215,6 +225,9 @@ function projectFourAction(e) {
 	let projectSixPage = document.getElementById("projectSix");
 	projectSixPage.setAttribute("style", "display: none");
 
+	let projectSevenPage = document.getElementById("projectSeven");
+	projectSevenPage.setAttribute("style", "display: none");
+
 }
 
 /* Project Five button Functionality */
@@ -241,6 +254,9 @@ function projectFiveAction(e) {
 
 	let projectSixPage = document.getElementById("projectSix");
 	projectSixPage.setAttribute("style", "display: none");
+
+	let projectSevenPage = document.getElementById("projectSeven");
+	projectSevenPage.setAttribute("style", "display: none");
 }
 
 
@@ -268,4 +284,36 @@ function projectSixAction(e) {
 
 	let projectSixPage = document.getElementById("projectSix");
 	projectSixPage.setAttribute("style", "display: block");
+
+	let projectSevenPage = document.getElementById("projectSeven");
+	projectSevenPage.setAttribute("style", "display: none");
+}
+
+/* Project Seven button Functionality */
+
+let projectSeven = document.getElementById("project7-button");
+projectSeven.onclick = projectSevenAction;
+
+function projectSevenAction(e) {
+	
+	let projectOnePage = document.getElementById("projectOne");
+	projectOnePage.setAttribute("style", "display: none;");
+
+	let projectTwoPage = document.getElementById("projectTwo");
+	projectTwoPage.setAttribute("style", "display: none;");
+
+	let projectThreePage = document.getElementById("projectThree");
+	projectThreePage.setAttribute("style", "display: none;");
+
+	let projectFourPage = document.getElementById("projectFour");
+	projectFourPage.setAttribute("style", "display: none;");
+
+	let projectFivePage = document.getElementById("projectFive");
+	projectFivePage.setAttribute("style", "display: none");
+
+	let projectSixPage = document.getElementById("projectSix");
+	projectSixPage.setAttribute("style", "display: none");
+
+	let projectSevenPage = document.getElementById("projectSeven");
+	projectSevenPage.setAttribute("style", "display: block");
 }
